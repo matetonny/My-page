@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for
 from json import loads, dumps
 
+
 views = Blueprint(__name__, 'views')
 
 @views.route('/')
