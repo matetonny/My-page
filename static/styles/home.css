@@ -1,0 +1,97 @@
+body {
+    background-color:lightyellow;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    border: 3px solid darkgoldenrod;
+    background-color: gold;
+    border-radius: 7px;
+    padding: 1rem;
+    overflow: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+h1 {
+    padding-left: 1rem;
+    display: inline-block;
+    margin: 0.5rem 0;
+    color: rgb(48, 67, 67);
+    font-weight: 600;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+nav{
+    border: 3px solid goldenrod;
+    background-color: rgb(255, 183, 0);
+    display: inline;
+    float: right;
+    margin-top: 0.5rem;
+    border-radius: 7px;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0.8rem;
+}
+
+nav a{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0;
+    display: inline;
+    text-decoration: none;
+    border: 2px solid darkgoldenrod;
+    border-radius: 7px;
+    background-color: goldenrod;
+    color: rgb(48, 67, 67);
+}
+
+nav a:hover{
+    border: 4px solid rgb(148, 109, 8);
+    background-color: rgb(171, 129, 24);
+}
+
+h2 {
+    color: rgb(48, 67, 67);
+}
+
+.introheader{
+    font-size: 2.5rem;
+}
+
+.intro, .aboutme{
+    width: 48%;
+    display: inline-block;
+}
+
+.aboutme{
+    float: right;
+}
+
+.intro p, .aboutme p{
+    color: rgb(48, 67, 67);
+    font-size: 1.3rem;
+}
+
+.textanchor{
+    color: black;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.textanchor:hover{
+    color: black;
+    font-weight: bold;
+}
+
+a{
+    transition: all 0.2s;
+}

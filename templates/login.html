@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/login.css') }}"
+    />
+    <link
+      rel="icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <h1>Mate's page</h1>
+    <div>
+      <h2>
+        Please login <a href="{{ url_for('views.register' )}}">Sign up</a>
+      </h2>
+      <p class="error">{{error}}</p>
+      <form action="mate_transport" method="POST">
+        <input type="text" name="username" placeholder="username" />
+        <input type="password" name="password" placeholder="password" />
+        <p><input type="submit" value="done" /></p>
+      </form>
+    </div>
+  </body>
+</html>
