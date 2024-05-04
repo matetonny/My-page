@@ -1,8 +1,10 @@
-from flask import Flask, render_template, url_for
+from flask import Flask
+from flask_ngrok2 import run_with_ngrok
 from views import views
 
 app = Flask(__name__)
 app.register_blueprint(views, url_prefix='/')
+run_with_ngrok(app)
 
 if __name__ == '__main__':
-    app.run(debug=False, port=8000, host='0.0.0.0')
+    app.run()
