@@ -3,54 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mates webpage</title>
+    <title>Tonny</title>
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='styles/home.css') }}"
+      href="{{ url_for('static', filename='styles/header.css') }}"
     />
     <link
       rel="icon"
+      type="image/x-icon"
       href="{{ url_for('static', filename='images/favicon.ico') }}"
     />
   </head>
   <body>
     <header>
-      <h1>Mate's page</h1>
-      <nav>
-        <ul>
-          <li>
-            <a href="{{ url_for('views.login') }}">Mate Transport</a>
-          </li>
+      <a class="logo" href="{{ url_for('views.home') }}">Mate Tonny</a>
+      <nav id="navbar">
+        <ul class="navbar">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
           <li><a href="#">Home</a></li>
-          <li>
-            <a href="{{ url_for('views.pnda') }}">P.N.D.A</a>
-          </li>
         </ul>
       </nav>
+      <button class="hamburgerMenuBtn" id="hamburgerMenuBtn">
+        <img
+          src="{{ url_for('static', filename='images/burger-menu.svg') }}"
+          alt="hamburger menu icon"
+          width="40"
+        />
+      </button>
+      <div class="hamburgerMenu hidden" id="hamburgerMenu">
+        <nav>
+          <ul class="hamburgerMenuNavbar">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <div id="intro" class="intro">
-      <h2 class="introheader">Welcome to my page!</h2>
-      <p>
-        This is my webpage made with the python library flask. Learn more about
-        it
-        <a
-          href="https://flask.palletsprojects.com/en/3.0.x/"
-          class="textanchor"
-          target="_blank"
-          >here</a
-        >. The code to this page is open souced and can be seen on my github.
-      </p>
-    </div>
-    <div class="aboutme">
-      <h2 class="introheader">About me</h2>
-      <p>
-        I am Mate and this is my page i made with my python skills. On this page
-        you can see my projects, buy stuff from Mate Transport, view the
-        official P.N.D.A page, use utilities and more.
-      </p>
-    </div>
-    <section id="myprojects">
-      <h2>My projects</h2>
-    </section>
+
+    <script src=" {{ url_for('static', filename='js/script.js') }} "></script>
   </body>
 </html>
