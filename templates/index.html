@@ -9,6 +9,10 @@
       href="{{ url_for('static', filename='styles/header.css') }}"
     />
     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/home.css') }}"
+    />
+    <link
       rel="icon"
       type="image/x-icon"
       href="{{ url_for('static', filename='images/favicon.ico') }}"
@@ -28,20 +32,34 @@
         <img
           src="{{ url_for('static', filename='images/burger-menu.svg') }}"
           alt="hamburger menu icon"
+          id="hamburgerMenuIcon"
           width="40"
         />
       </button>
-      <div class="hamburgerMenu hidden" id="hamburgerMenu">
-        <nav>
-          <ul class="hamburgerMenuNavbar">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Home</a></li>
-          </ul>
-        </nav>
-      </div>
     </header>
+    <div class="hamburgerMenu folded" id="hamburgerMenu">
+      <nav>
+        <ul class="hamburgerMenuNavbar">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </nav>
+    </div>
 
-    <script src=" {{ url_for('static', filename='js/script.js') }} "></script>
+    <script src=" {{ url_for('static', filename='js/header.js') }} "></script>
+
+    <div class="introBackground">
+      <section class="introSection">
+        <div class="intro">
+          <h2>Welcome to my website!</h2>
+          <p>
+            This is a website i made using a python(with the flask library)
+            backend and HTML, CSS and JS frontend. Here you can see my projects
+            and some useful utilities.
+          </p>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

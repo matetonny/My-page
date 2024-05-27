@@ -1,0 +1,24 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 8rem 0 8rem 0;
+    color: aliceblue;
+    backdrop-filter: blur(2px);
+}
+
+.intro h2{
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.intro p {
+    text-align: center;
+    font-size: 1.4rem;
+    width: 20rem;
+}
+
+.introBackground {
+    background-image: url('../images/github-page.png');
+}
