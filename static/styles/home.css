@@ -1,24 +1,109 @@
 .intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 8rem 0 8rem 0;
-    color: aliceblue;
-    backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 12rem 0 12rem 0;
+  color: aliceblue;
+  backdrop-filter: blur(2px);
 }
 
-.intro h2{
-    font-size: 2.4rem;
-    text-align: center;
+.intro h2 {
+  font-size: 2.4rem;
+  text-align: center;
 }
 
 .intro p {
-    text-align: center;
-    font-size: 1.4rem;
-    width: 20rem;
+  text-align: center;
+  font-size: 1.4rem;
+  width: 20rem;
 }
 
 .introBackground {
-    background-image: url('../images/github-page.png');
+  background-image: url("/static/images/github-page.png");
+  background-position: center;
+}
+
+.intro a, .githubDisplay a {
+  color: inherit;
+  text-decoration: none;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.intro a:hover, .githubDisplay a:hover {
+  text-decoration: underline;
+}
+
+.about {
+  display: flex;
+  padding: 1.5rem 0 2rem 0;
+  margin: 1.5rem 0 3rem 0;
+}
+
+.about h3 {
+  font-weight: bolder;
+  font-size: 2.4rem;
+  margin-left: 2rem;
+}
+
+.about p {
+  margin-left: 2rem;
+  font-size: x-large;
+}
+
+.aboutMe,
+.aboutPage {
+  width: 50%;
+}
+
+.githubDisplay {
+  display: flex;
+  justify-content:center;
+  margin: 5rem;
+}
+
+.githubDisplay h3{
+  display: inline;
+  font-size: 3rem;
+}
+
+.githubDisplay p{
+  font-size: 1.4rem;
+}
+
+.titleTextWrapper {
+  margin-left: 1rem;
+  width: 30%
+}
+
+@media only screen and (max-width: 762px) {
+  .about h3 {
+    font-weight: bolder;
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+
+  .aboutMe h3 {
+    margin-bottom: 4rem;
+  }
+
+  .about p{
+    margin-left: 2rem;
+    font-size: large;
+  }
+
+  .githubDisplay p {
+    font-size: medium;
+  }
+
+  .titleTextWrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 506px) {
+  .githubDisplay h3 {
+    font-size: 2rem;
+  }
 }

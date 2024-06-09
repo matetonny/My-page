@@ -5,7 +5,7 @@ let header = document.querySelector("header");
 let hamburgerMenuIcon = document.querySelector("#hamburgerMenuIcon");
 
 function check_size(){
-    if (window.innerWidth <= 650){
+    if (window.innerWidth <= 762){
         navbar.classList.add("hidden");
         hamburgerMenuBtn.classList.remove("hidden");
     } else {

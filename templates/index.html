@@ -13,6 +13,10 @@
       href="{{ url_for('static', filename='styles/home.css') }}"
     />
     <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/footer.css') }}"
+    />
+    <link
       rel="icon"
       type="image/x-icon"
       href="{{ url_for('static', filename='images/favicon.ico') }}"
@@ -23,9 +27,9 @@
       <a class="logo" href="{{ url_for('views.home') }}">Mate Tonny</a>
       <nav id="navbar">
         <ul class="navbar">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Home</a></li>
+          <li><a href="{{ url_for('views.home') }}#about">About</a></li>
+          <li><a href="{{ url_for('views.home') }}">Contact</a></li>
+          <li><a href="{{ url_for('views.home') }}">Home</a></li>
         </ul>
       </nav>
       <button class="hamburgerMenuBtn" id="hamburgerMenuBtn">
@@ -40,9 +44,9 @@
     <div class="hamburgerMenu folded" id="hamburgerMenu">
       <nav>
         <ul class="hamburgerMenuNavbar">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Home</a></li>
+          <li><a href="{{ url_for('views.home') }}about">About</a></li>
+          <li><a href="{{ url_for('views.home') }}">Contact</a></li>
+          <li><a href="{{ url_for('views.home') }}">Home</a></li>
         </ul>
       </nav>
     </div>
@@ -54,12 +58,62 @@
         <div class="intro">
           <h2>Welcome to my website!</h2>
           <p>
-            This is a website i made using a python(with the flask library)
-            backend and HTML, CSS and JS frontend. Here you can see my projects
-            and some useful utilities.
+            This is a website i made using a python(with the
+            <a href="https://flask.palletsprojects.com/en/3.0.x/">flask</a>
+            library) backend and HTML, CSS and JS frontend. Here you can see my
+            projects and some useful utilities.
           </p>
         </div>
       </section>
     </div>
+
+    <section id="about">
+      <div class="about">
+        <div class="aboutPage">
+          <h3>How this page works</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+            tempora ab molestias doloremque pariatur repellendus sed natus odit
+            aliquid, quasi maiores, illo iure laborum nam dignissimos, ullam
+            quidem unde libero.
+          </p>
+        </div>
+        <div class="aboutMe">
+          <h3>About me</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
+            tempora ab molestias doloremque pariatur repellendus sed natus odit
+            aliquid, quasi maiores, illo iure laborum nam dignissimos, ullam
+            quidem unde libero.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="githubDisplay">
+      <img
+        src="{{ url_for('static', filename='images/github-logo.png') }}"
+        alt="github logo"
+        height="150"
+      />
+      <div class="titleTextWrapper">
+        <h3>See On Github</h3>
+        <p>
+          The code of this page is open source and you can see it on github with
+          <a href="https://github.com/matetonny/My-page">this</a> link. You can
+          see more information about this page there.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>Open sourced by Mate Chocheli - 2024</p>
+      <p>
+        Made using python, flask, html, css and js.<br /><a
+          href="https://github.com/matetonny/My-page"
+          >See on github.</a
+        >
+      </p>
+    </footer>
   </body>
 </html>

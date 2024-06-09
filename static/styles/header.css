@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -12,6 +16,7 @@ header {
   margin: 0;
   background-color: rgb(255, 196, 0);
   padding: 0 0 0 1rem;
+  z-index: 10000;
 }
 
 button {
@@ -24,6 +29,11 @@ button {
   text-decoration: none;
   font-weight: bold;
   margin: 1.2rem;
+  transition: 0.2s;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .navbar {
@@ -87,6 +97,9 @@ ul {
   border-bottom: rgb(220, 176, 2) 4px solid;
   overflow: hidden;
   transition: height 0.3s ease;
+  position: sticky;
+  top: 5.5rem;
+  z-index: 10000;
 }
 
 .hamburgerMenu nav {

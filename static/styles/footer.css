@@ -1,0 +1,23 @@
+footer {
+    display: flex;
+    background-color: rgb(255, 196, 0);
+    margin: 0;
+    padding: 1.3rem;
+    align-items: center;
+    justify-content: space-between;
+    border-top: rgb(220, 176, 2) 4px solid;
+}
+
+footer p {
+    font-size: large;
+}
+
+footer a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
