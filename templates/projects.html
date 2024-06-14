@@ -10,7 +10,7 @@
     />
     <link
       rel="stylesheet"
-      href="{{ url_for('static', filename='styles/home.css') }}"
+      href="{{ url_for('static', filename='styles/projects.css') }}"
     />
     <link
       rel="stylesheet"
@@ -28,7 +28,7 @@
       <nav id="navbar">
         <ul class="navbar">
           <li><a href="{{ url_for('views.home') }}#about">About</a></li>
-          <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
+          <li><a href="{{ url_for('views.home') }}">Contact</a></li>
           <li><a href="{{ url_for('views.home') }}">Home</a></li>
         </ul>
       </nav>
@@ -45,7 +45,7 @@
       <nav>
         <ul class="hamburgerMenuNavbar">
           <li><a href="{{ url_for('views.home') }}about">About</a></li>
-          <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
+          <li><a href="{{ url_for('views.home') }}">Contact</a></li>
           <li><a href="{{ url_for('views.home') }}">Home</a></li>
         </ul>
       </nav>
@@ -56,59 +56,23 @@
     <div class="introBackground">
       <section class="introSection">
         <div class="intro">
-          <h2>Welcome to my website!</h2>
+          <h2>See my projects.</h2>
           <p>
-            This is a website i made using a python(with the
-            <a
-              href="https://flask.palletsprojects.com/en/3.0.x/"
-              target="_blank"
-              >flask</a
-            >
-            library) backend and HTML, CSS and JS frontend. Here you can see my
-            projects and some useful utilities.
+            On this page you can see the projects ive made and their showcases.
+            Ive made software and hardware projects and you can see their code
+            and photos.
           </p>
         </div>
       </section>
     </div>
 
-    <section id="about">
-      <div class="about">
-        <div class="aboutPage">
-          <h3>How this page works</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            tempora ab molestias doloremque pariatur repellendus sed natus odit
-            aliquid, quasi maiores, illo iure laborum nam dignissimos, ullam
-            quidem unde libero.
-          </p>
-        </div>
-        <div class="aboutMe">
-          <h3>About me</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit
-            tempora ab molestias doloremque pariatur repellendus sed natus odit
-            aliquid, quasi maiores, illo iure laborum nam dignissimos, ullam
-            quidem unde libero.
-          </p>
-        </div>
-      </div>
+    <section id="projects">
+      <ul class="projectList">
+        <li class="project"></li>
+        <li class="project"></li>
+        <li class="project"></li>
+      </ul>
     </section>
-
-    <div class="githubDisplay">
-      <img
-        src="{{ url_for('static', filename='images/github-logo.png') }}"
-        alt="github logo"
-        height="150"
-      />
-      <div class="titleTextWrapper">
-        <h3>See On Github</h3>
-        <p>
-          The code of this page is open source and you can see it on github with
-          <a href="https://github.com/matetonny/My-page">this</a> link. You can
-          see more information about this page there.
-        </p>
-      </div>
-    </div>
 
     <footer>
       <p>Made by Mate Chocheli - 2024</p>

@@ -5,6 +5,11 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  cursor: url(/static/images/cursor/cursor.png), auto;
+}
+
+a:hover, button:hover{
+  cursor: url(/static/images/cursor/pointer.png), none;
 }
 
 header {
