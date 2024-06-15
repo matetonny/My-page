@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tonny</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/header.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/utilities.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/footer.css') }}"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{{ url_for('static', filename='images/favicon.ico') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="{{ url_for('views.home') }}">Mate Tonny</a>
+      <nav id="navbar">
+        <ul class="navbar">
+          <li><a href="{{ url_for('views.home') }}#about">About</a></li>
+          <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
+          <li><a href="{{ url_for('views.home') }}">Home</a></li>
+          <li><a href="{{ url_for('views.utilities') }}">Utilities</a></li>
+        </ul>
+      </nav>
+      <button class="hamburgerMenuBtn" id="hamburgerMenuBtn">
+        <img
+          src="{{ url_for('static', filename='images/burger-menu.svg') }}"
+          alt="hamburger menu icon"
+          id="hamburgerMenuIcon"
+          width="40"
+        />
+      </button>
+    </header>
+    <div class="hamburgerMenu folded" id="hamburgerMenu">
+      <nav>
+        <ul class="hamburgerMenuNavbar">
+          <li><a href="{{ url_for('views.home') }}#about">About</a></li>
+          <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
+          <li><a href="{{ url_for('views.home') }}">Home</a></li>
+          <li><a href="{{ url_for('views.utilities') }}">Utilities</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src=" {{ url_for('static', filename='js/header.js') }} "></script>
+
+    <div class="utilityIntro">
+      <div class="introTextWrapper">
+        <h2>Use free and easy to use utilities from me</h2>
+        <p>
+          On this page you can use utilities like an image resizer and
+          reformatter, calculator, currency converter, etc. This page has no
+          limits on the input and is all free.
+        </p>
+      </div>
+      <img
+        src="{{ url_for('static', filename='images/utility-symbol.png') }}"
+        alt="utility symbol"
+      />
+    </div>
+
+    <hr />
+
+    <h2 class="utilHeader">Utilities</h2>
+
+    <ul class="utilityList">
+      <li>
+        <h3>Calculator</h3>
+        <div class="calculatorWrapper">
+          <div class="calculator">
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+              <button class="btn" onclick="clearDisplay()">C</button>
+              <button class="btn" onclick="calculate()">=</button>
+              <button class="btn" onclick="appendDigit('.')">.</button>
+              <button class="btn" onclick="appendOperator('/')">/</button>
+              <button class="btn" onclick="appendDigit('7')">7</button>
+              <button class="btn" onclick="appendDigit('8')">8</button>
+              <button class="btn" onclick="appendDigit('9')">9</button>
+              <button class="btn" onclick="appendOperator('*')">*</button>
+              <button class="btn" onclick="appendDigit('4')">4</button>
+              <button class="btn" onclick="appendDigit('5')">5</button>
+              <button class="btn" onclick="appendDigit('6')">6</button>
+              <button class="btn" onclick="appendOperator('-')">-</button>
+              <button class="btn" onclick="appendDigit('1')">1</button>
+              <button class="btn" onclick="appendDigit('2')">2</button>
+              <button class="btn" onclick="appendDigit('3')">3</button>
+              <button class="btn" onclick="appendOperator('+')">+</button>
+              <button class="btn" onclick="appendDigit('0')">0</button>
+            </div>
+          </div>
+        </div>
+
+        <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
+      </li>
+    </ul>
+
+    <footer>
+      <p>Made by Mate Chocheli - 2024</p>
+      <p>
+        Made using python, flask, html, css and js.<br /><a
+          href="https://github.com/matetonny/My-page"
+          >See on github.</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>

@@ -28,7 +28,7 @@
       <nav id="navbar">
         <ul class="navbar">
           <li><a href="{{ url_for('views.home') }}#about">About</a></li>
-          <li><a href="{{ url_for('views.home') }}">Contact</a></li>
+          <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
           <li><a href="{{ url_for('views.home') }}">Home</a></li>
         </ul>
       </nav>
@@ -44,8 +44,8 @@
     <div class="hamburgerMenu folded" id="hamburgerMenu">
       <nav>
         <ul class="hamburgerMenuNavbar">
-          <li><a href="{{ url_for('views.home') }}about">About</a></li>
-          <li><a href="{{ url_for('views.home') }}">Contact</a></li>
+          <li><a href="{{ url_for('views.home') }}#about">About</a></li>
+          <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
           <li><a href="{{ url_for('views.home') }}">Home</a></li>
         </ul>
       </nav>
@@ -67,12 +67,62 @@
     </div>
 
     <section id="projects">
+      <h2>Projects</h2>
       <ul class="projectList">
-        <li class="project"></li>
-        <li class="project"></li>
-        <li class="project"></li>
+        <li class="project">
+          <h3>My page</h3>
+          <p>
+            This project is a website i made with python, html, css and
+            javascript. It's where i show my projects and have some easy to
+            access. utilities. This is the page you are looking at right now.
+          </p>
+          <a href="https://github.com/matetonny/My-page" class="linkToGithub"
+            ><img
+              src="{{ url_for('static', filename='images/github-logo.png') }}"
+              alt="github logo"
+              height="60"
+            />Link to github repo</a
+          >
+        </li>
+        <li class="project">
+          <h3>T16b2</h3>
+          <p>
+            T16b2(Tonny 16-bit 2) is the second version of a 16-bit turing
+            complete machine that has its own assembly language, emulator and
+            documnentation. It has 65.536KB of RAM, can draw on a screen and it
+            run as fast as your CPU can handle.
+          </p>
+          <a href="https://github.com/matetonny/T16b2" class="linkToGithub"
+            ><img
+              src="{{ url_for('static', filename='images/github-logo.png') }}"
+              alt="github logo"
+              height="60"
+            />Link to github repo</a
+          >
+        </li>
+        <li class="project">
+          <h3>Spyge</h3>
+          <p>
+            spyge(Simplified Python Graphics Extension) is a very simple pip
+            library made in python thats based on pygame. It simplifies pygame
+            and also adds extra features from other libraries like widgets.
+          </p>
+          <a href="https://github.com/matetonny/SPYGE" class="linkToGithub"
+            ><img
+              src="{{ url_for('static', filename='images/github-logo.png') }}"
+              alt="github logo"
+              height="60"
+            />Link to github repo</a
+          >
+        </li>
       </ul>
     </section>
+
+    <hr />
+
+    <a href="{{ url_for('views.utilities') }}" class="seeUtilities"
+      >Go to utilities &gt</a
+    >
 
     <footer>
       <p>Made by Mate Chocheli - 2024</p>

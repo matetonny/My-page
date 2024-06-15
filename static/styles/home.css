@@ -77,11 +77,26 @@
   width: 30%
 }
 
+.seeMyProjects {
+  display: block;
+  color: black;
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+  text-decoration: none;
+  margin: 3rem;
+  transition: 0.2s;
+}
+
+.seeMyProjects:hover {
+  transform: scale(1.1);
+}
+
 @media only screen and (max-width: 762px) {
   .about h3 {
     font-weight: bolder;
     font-size: 2rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   .aboutMe h3 {
@@ -89,12 +104,16 @@
   }
 
   .about p{
-    margin-left: 2rem;
+    margin-left: 1rem;
     font-size: large;
   }
 
+  .githubDisplay {
+    margin: 1rem;
+  }
+
   .githubDisplay p {
-    font-size: small;
+    font-size: medium;
   }
 
   .titleTextWrapper {

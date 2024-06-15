@@ -1,0 +1,113 @@
+h2 {
+  font-size: 2.85rem;
+  margin: 1rem 0 1rem 0;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.utilityList li {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: #bbb dashed 3px;
+}
+
+.utilHeader {
+  margin: 2rem 0 2rem 5rem;
+}
+
+.introTextWrapper {
+  width: 40rem;
+  margin: 2rem 0 0 3rem;
+}
+
+.utilityIntro {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.utilityIntro p {
+  font-size: x-large;
+}
+
+.utilityIntro img {
+  width: 20rem;
+}
+
+.utilityList {
+  padding: 0;
+  border-top: #bbb dashed 3px;
+}
+
+.calculatorWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  margin: 0;
+}
+
+.calculator {
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.display {
+  background-color: #222;
+  color: rgb(203, 203, 203);
+  font-size: 2em;
+  padding: 20px;
+  text-align: right;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.btn {
+  border: 1px solid #ddd;
+  padding: 20px;
+  font-size: 1.5em;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #eee;
+}
+
+.btn:active {
+  background-color: #ccc;
+}
+
+@media only screen and (max-width: 762px) {
+  .utilityIntro {
+    justify-content: center;
+  }
+
+  .utilityIntro img {
+    width: 15rem;
+  }
+
+  .introTextWrapper {
+    margin: 0.5rem 1rem 0 1rem;
+  }
+
+  .utilHeader {
+    margin: 0;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: x-large;
+  }
+}

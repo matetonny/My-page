@@ -15,6 +15,7 @@ function check_size(){
         hamburgerMenu.classList.remove("unfolded");
     }
 }
+
 check_size();
 window.addEventListener("resize", check_size);
 

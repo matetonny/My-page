@@ -30,6 +30,7 @@
           <li><a href="{{ url_for('views.home') }}#about">About</a></li>
           <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
           <li><a href="{{ url_for('views.home') }}">Home</a></li>
+          <li><a href="{{ url_for('views.utilities') }}">Utilities</a></li>
         </ul>
       </nav>
       <button class="hamburgerMenuBtn" id="hamburgerMenuBtn">
@@ -47,6 +48,7 @@
           <li><a href="{{ url_for('views.home') }}about">About</a></li>
           <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
           <li><a href="{{ url_for('views.home') }}">Home</a></li>
+          <li><a href="{{ url_for('views.utilities') }}">Utilities</a></li>
         </ul>
       </nav>
     </div>
@@ -94,6 +96,8 @@
       </div>
     </section>
 
+    <hr />
+
     <div class="githubDisplay">
       <img
         src="{{ url_for('static', filename='images/github-logo.png') }}"
@@ -109,6 +113,12 @@
         </p>
       </div>
     </div>
+
+    <hr />
+
+    <a href="{{ url_for('views.projects') }}#projects" class="seeMyProjects"
+      >See My Projects &gt</a
+    >
 
     <footer>
       <p>Made by Mate Chocheli - 2024</p>

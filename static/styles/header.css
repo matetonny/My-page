@@ -8,6 +8,10 @@ body {
   cursor: url(/static/images/cursor/cursor.png), auto;
 }
 
+p:hover, h2:hover, h3:hover {
+  cursor: text;
+}
+
 a:hover, button:hover{
   cursor: url(/static/images/cursor/pointer.png), none;
 }
@@ -26,6 +30,10 @@ header {
 
 button {
   cursor: pointer;
+}
+
+hr {
+  border: 1px solid rgb(120, 120, 120);
 }
 
 .logo {
@@ -128,7 +136,7 @@ ul {
 
 .hamburgerMenuNavbar li {
   display: inline;
-  margin: 0.7rem 0 0.7rem 0;
+  margin: 0.5rem 0 0.5rem 0;
 }
 
 .hamburgerMenuNavbar a {
@@ -136,7 +144,7 @@ ul {
   text-decoration: none;
   margin: 0 0.7rem 0 0.7rem;
   color: rgb(49, 41, 0);
-  font-size: larger;
+  font-size: large;
 }
 
 .hamburgerMenuNavbar a::before {

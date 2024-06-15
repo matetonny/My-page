@@ -35,8 +35,70 @@
   text-decoration: underline;
 }
 
+h2 {
+  font-size: 2.3rem;
+  text-align: center;
+}
+
 .projectList {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
+  padding: 1rem 2rem 1rem 2rem;;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: black solid 3px;
+  margin: 1.5rem;
+  width: 20rem;
+  padding: 2rem;
+}
+
+.project h3 {
+  font-size: 2rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.project p {
+  font-size: x-large;
+}
+
+.linkToGithub {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: larger;
+}
+
+.linkToGithub img {
+  margin-right: 1rem;
+}
+
+.seeUtilities {
+  display: block;
+  color: black;
+  font-weight: bold;
+  font-size: xx-large;
+  text-align: center;
+  text-decoration: none;
+  margin: 3rem;
+  transition: 0.2s;
+}
+
+.seeUtilities:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 762px) {
+  .project {
+    margin: 0.6rem;
+  }
+
+  .projectList {
+    padding: 1rem;
+  }
 }

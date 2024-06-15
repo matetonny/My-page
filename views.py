@@ -12,6 +12,14 @@ def root_redirect():
 def home():
     return render_template('index.html')
 
+@views.route('/projects')
+def projects():
+    return render_template('projects.html')
+
+@views.route('/utilities')
+def utilities():
+    return render_template('utilities.html')
+
 # @views.route('/mate_transport_new_acc', methods = ['POST', 'GET'])
 # def create_acc():
 #     if request.method == 'GET':
