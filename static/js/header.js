@@ -15,8 +15,6 @@ function check_size(){
         hamburgerMenu.classList.remove("unfolded");
     }
 }
-
-check_size();
 window.addEventListener("resize", check_size);
 
 let counter = 0;
@@ -33,3 +31,5 @@ hamburgerMenuBtn.addEventListener("click", function(){
     }
     counter++;
 })
+
+check_size();
