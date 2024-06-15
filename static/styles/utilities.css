@@ -89,6 +89,19 @@ h3 {
   background-color: #ccc;
 }
 
+.btn0 {
+  border-bottom-left-radius: 10px;
+}
+
+.btnPlus {
+  border-bottom-right-radius: 10px;
+}
+
+.orangeBtn {
+  background-color: orange;
+  border: rgb(184, 120, 0) 1px solid;
+}
+
 .currencyExchangeWrapper {
   display: flex;
   justify-content: center;
@@ -111,7 +124,8 @@ h3 {
 }
 
 .currencyExchange p {
-  display: inline;
+  font-weight: bolder;
+  font-size: x-large;
 }
 
 input, select, .exchangeBtn {
@@ -128,14 +142,14 @@ input {
 }
 
 .exchangeBtn {
-  background-color: #007bff;
+  background-color: rgb(51, 51, 51);
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .exchangeBtn:hover {
-  background-color: #0056b3;
+  background-color: rgb(18, 18, 18);
 }
 
 #result {

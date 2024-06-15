@@ -27,9 +27,9 @@
       <a class="logo" href="{{ url_for('views.home') }}">Mate Tonny</a>
       <nav id="navbar">
         <ul class="navbar">
+          <li><a href="{{ url_for('views.home') }}">Home</a></li>
           <li><a href="{{ url_for('views.home') }}#about">About</a></li>
           <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
-          <li><a href="{{ url_for('views.home') }}">Home</a></li>
           <li><a href="{{ url_for('views.utilities') }}">Utilities</a></li>
         </ul>
       </nav>
@@ -45,9 +45,9 @@
     <div class="hamburgerMenu folded" id="hamburgerMenu">
       <nav>
         <ul class="hamburgerMenuNavbar">
+          <li><a href="{{ url_for('views.home') }}">Home</a></li>
           <li><a href="{{ url_for('views.home') }}#about">About</a></li>
           <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
-          <li><a href="{{ url_for('views.home') }}">Home</a></li>
           <li><a href="{{ url_for('views.utilities') }}">Utilities</a></li>
         </ul>
       </nav>
@@ -81,29 +81,40 @@
           <div class="calculator">
             <div class="display" id="display">0</div>
             <div class="buttons">
-              <button class="calcBtn" onclick="clearDisplay()">C</button>
-              <button class="calcBtn" onclick="calculate()">=</button>
-              <button class="calcBtn" onclick="appendDigit('.')">.</button>
-              <button class="calcBtn" onclick="appendOperator('/')">/</button>
               <button class="calcBtn" onclick="appendDigit('7')">7</button>
               <button class="calcBtn" onclick="appendDigit('8')">8</button>
               <button class="calcBtn" onclick="appendDigit('9')">9</button>
-              <button class="calcBtn" onclick="appendOperator('*')">*</button>
+              <button class="calcBtn orangeBtn" onclick="appendOperator('/')">
+                /
+              </button>
               <button class="calcBtn" onclick="appendDigit('4')">4</button>
               <button class="calcBtn" onclick="appendDigit('5')">5</button>
               <button class="calcBtn" onclick="appendDigit('6')">6</button>
-              <button class="calcBtn" onclick="appendOperator('-')">-</button>
+              <button class="calcBtn orangeBtn" onclick="appendOperator('*')">
+                *
+              </button>
               <button class="calcBtn" onclick="appendDigit('1')">1</button>
               <button class="calcBtn" onclick="appendDigit('2')">2</button>
               <button class="calcBtn" onclick="appendDigit('3')">3</button>
-              <button class="calcBtn" onclick="appendOperator('+')">+</button>
-              <button class="calcBtn" onclick="appendDigit('0')">0</button>
+              <button class="calcBtn orangeBtn" onclick="appendOperator('-')">
+                -
+              </button>
+              <button class="calcBtn btn0" onclick="appendDigit('0')">0</button>
+              <button class="calcBtn" onclick="clearDisplay()">C</button>
+              <button class="calcBtn" onclick="calculate()">=</button>
+              <button
+                class="calcBtn orangeBtn btnPlus"
+                onclick="appendOperator('+')"
+              >
+                +
+              </button>
             </div>
           </div>
         </div>
 
         <script src="{{ url_for('static', filename='js/calculator.js') }}"></script>
       </li>
+
       <li>
         <h3>Currency Exchanger</h3>
         <div class="currencyExchangeWrapper">

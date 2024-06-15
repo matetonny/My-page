@@ -27,9 +27,10 @@
       <a class="logo" href="{{ url_for('views.home') }}">Mate Tonny</a>
       <nav id="navbar">
         <ul class="navbar">
+          <li><a href="{{ url_for('views.home') }}">Home</a></li>
           <li><a href="{{ url_for('views.home') }}#about">About</a></li>
           <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
-          <li><a href="{{ url_for('views.home') }}">Home</a></li>
+          <li><a href="{{ url_for('views.utilities') }}">Utilities</a></li>
         </ul>
       </nav>
       <button class="hamburgerMenuBtn" id="hamburgerMenuBtn">
@@ -44,9 +45,10 @@
     <div class="hamburgerMenu folded" id="hamburgerMenu">
       <nav>
         <ul class="hamburgerMenuNavbar">
+          <li><a href="{{ url_for('views.home') }}">Home</a></li>
           <li><a href="{{ url_for('views.home') }}#about">About</a></li>
           <li><a href="{{ url_for('views.projects') }}">Projects</a></li>
-          <li><a href="{{ url_for('views.home') }}">Home</a></li>
+          <li><a href="{{ url_for('views.utilities') }}">Utilities</a></li>
         </ul>
       </nav>
     </div>
