@@ -102,6 +102,10 @@ h3 {
   border: rgb(184, 120, 0) 1px solid;
 }
 
+.orangeBtn:hover {
+  background-color: rgb(198, 128, 0);
+}
+
 .currencyExchangeWrapper {
   display: flex;
   justify-content: center;

@@ -129,6 +129,15 @@
         </div>
         <script src="{{ url_for('static', filename='js/currencyExchange.js') }}"></script>
       </li>
+
+      <li>
+        <h3>Image resizer</h3>
+        <form action="/resize_img" method="post" enctype="multipart/form-data">
+          <input type="file" name="file" />
+          <input type="number" name="scale_factor" placeholder="scale %" />
+          <input type="submit" value="Upload" />
+        </form>
+      </li>
     </ul>
 
     <footer>

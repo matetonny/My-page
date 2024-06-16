@@ -1,8 +1,12 @@
-from flask import Blueprint, render_template, request, jsonify, redirect, url_for
-from json import loads, dumps
-
+from flask import Blueprint, render_template, request, flash, redirect, url_for, send_file
+from werkzeug.utils import secure_filename
+from PIL import Image
+from os import remove
 
 views = Blueprint(__name__, 'views')
+
+UPLOAD_FOLDER = '/upload_files'
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 @views.route('/')
 def root_redirect():
@@ -20,26 +24,46 @@ def projects():
 def utilities():
     return render_template('utilities.html')
 
-# @views.route('/mate_transport_new_acc', methods = ['POST', 'GET'])
-# def create_acc():
-#     if request.method == 'GET':
-#         return redirect(url_for('views.register'))
-#     if request.method == 'POST':
-#         form_data = request.form
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+def downscale_image(image_path, scale_factor):
+    with Image.open(image_path) as img:
+        new_size = (
+            int(img.width * scale_factor),
+            int(img.height * scale_factor)
+        )
         
-#         with open('accounts.json', 'r') as f:
-#             accounts = loads(f.read())
-            
-#         if form_data.to_dict()['username'] in accounts:
-#             return render_template('register.html', error='Account already exists')
-#         else:
-#             accounts[form_data.to_dict()['username']] = {
-#                 'password': form_data.to_dict()['password'],
-#                 'mate_coins': 0,
-#             }
-            
-#             with open('accounts.json', 'w') as f:
-#                 f.write(dumps(accounts, indent=2))
-            
-#         return render_template('mate_transport.html', form_data=form_data)
+        downscaled_img = img.resize(new_size, Image.Resampling.LANCZOS)
+        
+        remove(image_path)
+        downscaled_img.save(image_path)
+        
+def download(filename):
+    sent_file = send_file(filename, as_attachment=True)
     
+    remove(filename)
+    
+    return sent_file
+
+@views.route('/resize_img', methods=['POST', 'GET'])
+def resize_img():
+    if request.method == 'GET':
+        return redirect(url_for('views.home'))
+    if request.method == 'POST':
+        if 'file' not in request.files:
+            flash('No file part')
+            return redirect(request.url)
+        file = request.files['file']
+        
+        if file.filename == '':
+            flash('No selected file')
+            return redirect(request.url)
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(filename)
+            
+            downscale_image(filename, int(request.form['scale_factor']) / 100)
+            
+            return download(filename)
+            
