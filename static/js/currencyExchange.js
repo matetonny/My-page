@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 const rate = data.conversion_rate;
                 const exchangedAmount = (amount * rate).toFixed(2);
-                resultDiv.textContent = `${amount} ${fromCurrency} = ${exchangedAmount} ${toCurrency}`;
+                resultDiv.innerHTML = `<p>${amount} ${fromCurrency} = ${exchangedAmount} ${toCurrency}<p/>`;
             })
             .catch(error => console.error('Error fetching exchange rates:', error));
     });

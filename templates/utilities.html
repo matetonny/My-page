@@ -131,15 +131,6 @@
       </li>
 
       <li>
-        <h3>Image resizer</h3>
-        <form action="/resize_img" method="post" enctype="multipart/form-data">
-          <input type="file" name="file" />
-          <input type="number" name="scale_factor" placeholder="scale %" />
-          <input type="submit" value="Upload" />
-        </form>
-      </li>
-
-      <li>
         <h3>Distance Unit Converter</h3>
         <div class="distanceConvertWrapper">
           <div class="converter">
@@ -161,6 +152,31 @@
             <div id="convertResult" class="result"></div>
           </div>
           <script src="{{ url_for('static', filename='js/distanceConvertor.js') }}"></script>
+        </div>
+      </li>
+
+      <li>
+        <h3>Image resizer</h3>
+        <div class="imgResizeWrapper">
+          <div class="imgResize">
+            <form
+              action="/resize_img"
+              method="post"
+              enctype="multipart/form-data"
+            >
+              <label for="file-upload" class="custom-file-upload">
+                <img
+                  src="{{ url_for('static', filename='images/file-upload-icon.png') }}"
+                  alt="file upload icon"
+                  height="70"
+                />
+                Upload Image
+              </label>
+              <input type="file" name="file" id="file-upload" />
+              <input type="number" name="scale_factor" placeholder="scale %" />
+              <input type="submit" value="Upload" class="resizeBtn" />
+            </form>
+          </div>
         </div>
       </li>
     </ul>
