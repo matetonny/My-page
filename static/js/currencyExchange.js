@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fromCurrencySelect = document.getElementById('from-currency');
     const toCurrencySelect = document.getElementById('to-currency');
     const exchangeBtn = document.getElementById('exchange-btn');
-    const resultDiv = document.getElementById('result');
+    const resultDiv = document.getElementById('exchangeResult');
 
     const apiKey = 'c90ad824e645a3d2093693b4'; // Replace with your ExchangeRate-API key
     const apiURL = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;

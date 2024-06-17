@@ -124,7 +124,7 @@
             <p>&darr;</p>
             <select id="to-currency"></select>
             <button id="exchange-btn" class="exchangeBtn">Exchange</button>
-            <div id="result"></div>
+            <div id="exchangeResult" class="result"></div>
           </div>
         </div>
         <script src="{{ url_for('static', filename='js/currencyExchange.js') }}"></script>
@@ -137,6 +137,31 @@
           <input type="number" name="scale_factor" placeholder="scale %" />
           <input type="submit" value="Upload" />
         </form>
+      </li>
+
+      <li>
+        <h3>Distance Unit Converter</h3>
+        <div class="distanceConvertWrapper">
+          <div class="converter">
+            <input type="number" id="inputValue" placeholder="Enter value" />
+            <select id="inputUnit">
+              <option value="kilometers">Kilometers</option>
+              <option value="miles">Miles</option>
+              <option value="meters">Meters</option>
+              <option value="feet">Feet</option>
+            </select>
+            <p>&darr;</p>
+            <select id="outputUnit">
+              <option value="kilometers">Kilometers</option>
+              <option value="miles">Miles</option>
+              <option value="meters">Meters</option>
+              <option value="feet">Feet</option>
+            </select>
+            <button onclick="convert()" class="convertBtn">Convert</button>
+            <div id="convertResult" class="result"></div>
+          </div>
+          <script src="{{ url_for('static', filename='js/distanceConvertor.js') }}"></script>
+        </div>
       </li>
     </ul>
 

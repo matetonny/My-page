@@ -106,7 +106,7 @@ h3 {
   background-color: rgb(198, 128, 0);
 }
 
-.currencyExchangeWrapper {
+.currencyExchangeWrapper, .distanceConvertWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +118,7 @@ h3 {
   text-align: center;
 }
 
-.currencyExchange {
+.currencyExchange, .converter {
   display: flex;
   margin-top: 20px;
   flex-direction: column;
@@ -132,7 +132,7 @@ h3 {
   font-size: x-large;
 }
 
-input, select, .exchangeBtn {
+input, select, .exchangeBtn, .convertBtn {
   padding: 10px;
   margin: 10px 0;
   width: 18rem;
@@ -145,18 +145,18 @@ input {
   width: 16.5rem;
 }
 
-.exchangeBtn {
+.exchangeBtn, .convertBtn {
   background-color: rgb(51, 51, 51);
   color: white;
   border: none;
   cursor: pointer;
 }
 
-.exchangeBtn:hover {
+.exchangeBtn:hover, .convertBtn:hover {
   background-color: rgb(18, 18, 18);
 }
 
-#result {
+.result {
   margin-top: 20px;
   font-size: 1.2em;
 }

@@ -27,7 +27,7 @@ function clearDisplay() {
 
 function calculate() {
   try {
-    displayValue = eval(displayValue).toString();
+    displayValue = eval(displayValue).toFixed(5).toString();
   } catch {
     displayValue = "Error";
   }
